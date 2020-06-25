@@ -8,9 +8,11 @@ import '../widgets/todo_list_item_wdt.dart';
 class TodoListWdt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print('building Todo List Wdt');
+
     return Consumer<TodoList>(
       builder: (context, todoList, child) {
-        print('rebuilding Consumer Todo List Item Toggle Item Button');
+        print('rebuilding Consumer Todo List Wdt');
 
         return ListView.builder(
           physics: BouncingScrollPhysics(),

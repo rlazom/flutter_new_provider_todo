@@ -14,6 +14,16 @@ class TodoListWdt extends StatelessWidget {
       builder: (context, todoList, child) {
         print('rebuilding Consumer Todo List Wdt');
 
+        if(todoList.list.isEmpty) {
+          return new Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              new Icon(Icons.speaker_notes_off, size: 64,),
+              new Text('Empty ToDo List')
+            ],
+          );
+        }
+        
         return ListView.builder(
           physics: BouncingScrollPhysics(),
           itemCount: todoList.list.length,

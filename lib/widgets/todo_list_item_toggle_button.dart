@@ -13,11 +13,12 @@ class TodoListItemToggleButton extends StatelessWidget {
         print('rebuilding Consumer Todo List Item Toggle Item Button');
 
         return new RaisedButton(
+          shape: CircleBorder(),
           onPressed: (){
             todo.toggle();
           },
-          color: todo.done ? Colors.blue : Colors.red,
-          child: new Icon(Icons.refresh, color: Colors.white70,),
+          color: todo.done ? Colors.green : Colors.red,
+          child: new Icon(Icons.power_settings_new, color: Colors.white70,),
         );
       },
     );
